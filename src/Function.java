@@ -7,10 +7,9 @@ public class Function {
         StringBuilder formatada = new StringBuilder();
         str = str.toLowerCase();
         ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(str.split(" ")));
-        for (String frase: arrayList) {
-            formatada.append(frase.replace(frase.substring(0, 1), frase.substring(0, 1).toUpperCase()));
+       for (String frase: arrayList) {
+            formatada.append(frase.toUpperCase().substring(0,1) + frase.substring(1));
             formatada.append(" ");
-        }
         return formatada.toString();
     }
     public static String Title2(String str){
