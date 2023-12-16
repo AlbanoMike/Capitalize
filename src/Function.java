@@ -7,9 +7,10 @@ public class Function {
         StringBuilder formatada = new StringBuilder();
         str = str.toLowerCase();
         ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(str.split(" ")));
-       for (String frase: arrayList) {
+        for (String frase: arrayList) {
             formatada.append(frase.toUpperCase().substring(0,1) + frase.substring(1));
             formatada.append(" ");
+        }
         return formatada.toString();
     }
     public static String Title2(String str){
@@ -21,4 +22,17 @@ public class Function {
         }
         return formatada;
     }
+    public static String Title3(String str, String separador){
+        String formatada ="";
+        for (int i = 0; i < str.length(); i++) {
+            if(i == 0 ||String.valueOf(str.charAt(i-1)).equals(separador)|| String.valueOf(str.charAt(i-1)).equals(String.valueOf(" "))){
+                formatada += str.toUpperCase().charAt(i);
+            }else {
+                formatada += str.toLowerCase().charAt(i);
+            }
+        }
+        return formatada;
+    }
+
+
 }
